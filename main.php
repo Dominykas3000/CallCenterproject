@@ -27,7 +27,7 @@ try {
                 $to_number,
                 $twilio_number,
                 [
-                    "twiml" => "<Response><Say>Ahoy, World! I don't know if im gonna pass this course but i'll sure hope i do, i hope those all nighters will pay themselves off</Say></Response>"
+                    "twiml" => "<Response><Say>Hello plz worky ?</Say></Response>"
                 ]
         );
         echo "po client";
