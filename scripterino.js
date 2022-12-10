@@ -14,5 +14,5 @@ function callTo() {
   xml.status = function () {
     console.log("response" + this.responseText);
   };
-  xml.send(params);
+  xml.send();
 }

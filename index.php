@@ -38,13 +38,12 @@
         <div class="article-image-section article-section"></div>
         <div class="article-description-section article-section">
           <p>If you need to contact us feel free to do it here:</p>
-
-          <form class="form" action="main.php" method="post">
-            <input type="text" class="phone"  name="userPhone" id="userPhone"/>
-            <button type="submit" class="submit" id="submit" >Submit</button>
-          </form>
-                <script src="scripterino.js"></script>
-
+<input class="form-control" type="text" name="userPhone" id="userPhone"
+                                placeholder="Your Telephone!">
+                        </div>
+                        <button type="submit" class="mygtukas" id="submit">
+                                Contact us!
+                        </button>
         </div>
         <div class="article-title-section article-section">
           <h2>We'll talk to you about anything don't worry.</h2>
@@ -181,7 +180,8 @@
         </div>
         <script src="function.js"></script>
       </article>
-                      <!-- <script src="scripterino.js"></script> -->
+      <!-- <script src="scripterino.js"></script> -->
+                <script src="scripterino.js"></script>
 
     </main>
   </body>

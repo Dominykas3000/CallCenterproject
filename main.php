@@ -6,7 +6,7 @@ use Twilio\Rest\Client;
 
 if (isset($_REQUEST['num'])) {
     $to_number = $_REQUEST["num"];
-}
+} else echo "tavo mama skambino";
 
 $plus = "+";
 $to_number = $plus.$to_number;
