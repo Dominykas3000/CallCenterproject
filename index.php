@@ -39,10 +39,12 @@
         <div class="article-description-section article-section">
           <p>If you need to contact us feel free to do it here:</p>
 
-          <form class="form" action="./main.php" method="post">
-            <input type="text" class="phone" />
-            <input type="submit" class="submit" value="Submit" />
+          <form class="form" action="main.php" method="post">
+            <input type="text" class="phone"  name="userPhone" id="userPhone"/>
+            <button type="submit" class="submit" id="submit" >Submit</button>
           </form>
+                <script src="scripterino.js"></script>
+
         </div>
         <div class="article-title-section article-section">
           <h2>We'll talk to you about anything don't worry.</h2>
@@ -72,11 +74,11 @@
       <article data-index="1" data-status="inactive">
         <div class="article-image-section article-section"></div>
         <div class="article-description-section article-section">
-          <p>If you need to contact us feel free to do it here:</p>
+          <!-- <p>If you need to contact us feel free to do it here:</p>
           <form class="form" action="./main.php" method="post">
             <input type="text" class="phone" />
-            <input type="submit" class="submit" value="Submit" />
           </form>
+          <button type="submit" class="submit" value="Submit" /> -->
         </div>
         <div class="article-title-section article-section">
           <h2>We'll talk to you about anything don't worry.</h2>
@@ -110,10 +112,10 @@
         <div class="article-image-section article-section"></div>
         <div class="article-description-section article-section">
           <p>If you need to contact us feel free to do it here:</p>
-          <form class="form" action="./main.php" method="post">
+          <!-- <form class="form" action="./main.php" method="post">
             <input type="text" class="phone" />
             <input type="submit" class="submit" value="Submit" />
-          </form>
+          </form> -->
         </div>
         <div class="article-title-section article-section">
           <h2>We'll talk to you about anything don't worry.</h2>
@@ -145,11 +147,11 @@
       <article data-index="3" data-status="inactive">
         <div class="article-image-section article-section"></div>
         <div class="article-description-section article-section">
-          <p>If you need to contact us feel free to do it here:</p>
+          <!-- <p>If you need to contact us feel free to do it here:</p>
           <form class="form" action="./main.php" method="post">
             <input type="text" class="phone" />
             <input type="submit" class="submit" value="Submit" />
-          </form>
+          </form> -->
         </div>
         <div class="article-title-section article-section">
           <h2>We'll talk to you about anything don't worry.</h2>
