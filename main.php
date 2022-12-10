@@ -14,6 +14,10 @@ echo "$to_number\r\n";
 
 $lines = file('/var/www/html/twillio.txt', FILE_IGNORE_NEW_LINES);
 list($account_sid, $auth_token, $twilio_number) = $lines;
+echo $account_sid;
+echo $auth_token;
+echo $twilio_number;
+
 try {
         echo "bandymas\n";
         $client = new Client($account_sid, $auth_token);
@@ -30,4 +34,8 @@ try {
 } catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
+echo $account_sid;
+echo $auth_token;
+echo $twilio_number;
+echo $to_number;
 ?>
