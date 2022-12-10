@@ -12,11 +12,8 @@ $plus = "+";
 $to_number = $plus.$to_number;
 echo "$to_number\r\n";
 
-// Your Account SID and Auth Token from twilio.com/console
-$account_sid = 'ACf06bd2e866a6e35ecbb8f5de41dd3dd0';
-$auth_token = '1c0581c52aaa4d67c2239c196e7edf30';
-
-$twilio_number = "+13854583767";
+$lines = file('/var/www/html/twillio.txt', FILE_IGNORE_NEW_LINES);
+list($account_sid, $auth_token, $twilio_number) = $lines;
 try {
         echo "bandymas\n";
         $client = new Client($account_sid, $auth_token);
