@@ -35,7 +35,7 @@ echo $databasename;
 echo $databaseuser;
 echo $password;
 
-$connectionstring = "host=$privateip port=5432 dbname=$dbname user=$databaseuser password=$password";
+$connectionstring = "host=$privateip port=5432 dbname=$databasename user=$databaseuser password=$password";
 $connection = pg_connect($connectionstring);
 if ($connection) { //checking if the connection is established
     echo "MainFrame hacked we are in..\n";
@@ -48,7 +48,7 @@ $data = array(
 );
 
 // Main frame the data into the database
-$result = pg_insert($conn, "CallLog", $data);
+$result = pg_insert($connection, "CallLog", $data);
 
 // Check if the main frame operation was successful
 if ($result) {
