@@ -3,22 +3,19 @@ require __DIR__ . '/vendor/autoload.php';
 use Twilio\Rest\Client;
 if (isset($_REQUEST['num'])) {
     $to_number = $_REQUEST["num"];
-} else echo "tavo mama skambino";
+} else echo "number requested denied \n";
 $plus = "+";
 $to_number = $plus.$to_number;
 echo "$to_number\r\n";
 
 $lines = file('/var/www/html/data.txt', FILE_IGNORE_NEW_LINES);
-list($account_sid, $auth_token, $twilio_number, $privip, $dbname, $dbuser, $passwd) = $lines;
+list($account_sid, $auth_token, $twilio_number, $privateip, $databasename,  $databaseuser, $password) = $lines;
 echo $account_sid;
 echo $auth_token;
 echo $twilio_number;
-echo $privip;
-echo $dbname;
-echo $dbuser;
-echo $passwd;
+
 try {
-        echo "bandymas\n";
+        echo "Trying to creat a client\n";
         $client = new Client($account_sid, $auth_token);
             echo "Account created \n";
         echo $client;
@@ -26,26 +23,24 @@ try {
                 $to_number,
                 $twilio_number,
                 [
-                     "twiml" => "<Response><Say>Hello plz worky ?</Say></Response>"
+                     "twiml" => "<Response><Say>Hello im calling from microsoft your computer has virus</Say></Response>"
                 ]
         );
-            echo "after the client was created ";
+            echo "after the client was created \n";
     } catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
-echo $account_sid;
-echo $auth_token;
-echo $twilio_number;
-echo $to_number;
+echo $privateip;
+echo $databasename;
+echo $databaseuser;
+echo $password;
 
-$connstring = "host=$privip port=5432 dbname=$dbname user=$dbuser password=$passwd";
-$conn = pg_connect($connstring);
-if (!$conn) { //checking if the connection is established
-    echo "Error:( Web servers is not connected to the main frame.\n";
-    exit;
-}
+$connectionstring = "host=$privateip port=5432 dbname=$dbname user=$databaseuser password=$password";
+$connection = pg_connect($connectionstring);
+if ($connection) { //checking if the connection is established
+    echo "MainFrame hacked we are in..\n";
+} else echo "Error:( Web servers is not connected to the main frame.\n";
 
-echo "MainFrame hacked.\n";
 
 $data = array(
     "phone_number" => $to_number,
